@@ -1,4 +1,4 @@
-;;; sproto-mode.el --- major mode for editing sproto.
+;;; sproto-mode.el --- Major mode for editing sproto.
 
 ;; Author: m2q1n9
 ;; Created: 15-Nov-2015
@@ -14,7 +14,9 @@
 
 ;;; Code:
 
+;;;###autoload
 (define-derived-mode sproto-mode fundamental-mode "Sproto"
+  "Major mode for editing sproto."
   (setq font-lock-defaults '((
     ("#.*$" . font-lock-comment-face)
     ("-*[0-9]+-*" . font-lock-constant-face)
@@ -22,7 +24,6 @@
     ("-*\\(string\\|integer\\|boolean\\|request\\|response\\)-*" . font-lock-keyword-face)
 ))))
 
-;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.sproto\\'" . sproto-mode))
 
 (provide 'sproto-mode)

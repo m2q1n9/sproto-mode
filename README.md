@@ -8,8 +8,9 @@ sproto-mode
 How to Install
 --------------
 
-Put `sproto-mode.el' in Emacs load-path, and add this line to your .emacs file:
+Put `sproto-mode.el` in Emacs load-path, and add this line to your .emacs file:
 
 ```lisp
 (require 'sproto-mode)
+(add-to-list 'auto-mode-alist '("\\.sproto\\'" . sproto-mode))
 ```
